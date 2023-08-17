@@ -1,0 +1,20 @@
+app:
+  name: ordersqat-app
+  namespace: devhub
+  cluster: .apps.cluster-wdl5h.wdl5h.sandbox2975.opentlc.com
+
+git:
+  branch: main
+  repo: https://github.com/devhub-mad/ordersqat-app-backend
+  org: devhub-mad
+  name: ordersqat-app-backend
+
+image:
+  host: image-registry.openshift-image-registry.svc:5000
+  name: ordersqat-app-backend
+  tag: latest
+
+
+pipelineStorage:
+  pvcSize: 2Gi
+  storageClassName: ""
